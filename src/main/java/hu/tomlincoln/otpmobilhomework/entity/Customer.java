@@ -1,0 +1,37 @@
+package hu.tomlincoln.otpmobilhomework.entity;
+
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+
+@Entity
+public class Customer {
+
+    @EmbeddedId
+    private CustomerId id;
+    private String name;
+    private String address;
+
+    public CustomerId getId() {
+        return id;
+    }
+
+    public void setId(CustomerId id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}

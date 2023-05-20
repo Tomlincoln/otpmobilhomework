@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+    url: jdbc:h2:mem:testdb
+  h2.console.enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+logging:
+  file.name: application.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  level:
+    root: ERROR
